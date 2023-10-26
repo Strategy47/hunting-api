@@ -1,5 +1,7 @@
 {
+    "name": "strategy47/hunting-api",
     "type": "project",
+    "description": "Generates HuntingApp Open-Source API endpoints",
     "license": "proprietary",
     "minimum-stability": "stable",
     "prefer-stable": true,
