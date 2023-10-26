@@ -1,4 +1,4 @@
-name: PHPStan
+name: PHP CS Fixer
 
 on:
   push:
@@ -11,8 +11,8 @@ on:
       - 'phpstan.dist.neon'
 
 jobs:
-  phpstan:
-    name: phpstan
+  php-cs-fixer:
+    name: PHP CS Fixer
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -41,5 +41,5 @@ jobs:
       - name: Composer Install
         run: composer install --ansi --prefer-dist --no-interaction --no-progress
 
-      - name: Run PHPStan
-        run: ./vendor/bin/phpstan --error-format=github
+      - name: Run PHPCSFixer
+        run: ./vendor/bin/php-cs-fixer fix --dry-run --diff
